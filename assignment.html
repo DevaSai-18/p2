@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Header */
+        header {
+            grid-area: header;
+            background-color: #2563eb;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation */
+        nav {
+            grid-area: nav;
+            background-color: #dbeafe;
+            padding: 20px;
+        }
+
+        nav a {
+            display: block;
+            padding: 10px;
+            color: #1d4ed8;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background-color: #bfdbfe;
+        }
+
+        /* Main Content */
+        main {
+            grid-area: main;
+            background-color: white;
+            padding: 20px;
+        }
+
+        /* Resources */
+        aside {
+            grid-area: resources;
+            background-color: #e5e7eb;
+            padding: 20px;
+        }
+
+        /* Footer */
+        footer {
+            grid-area: footer;
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Grid Layout */
+        .container {
+            display: grid;
+            grid-template-columns: 200px 1fr 220px;
+            grid-template-areas:
+                "header header header"
+                "nav main resources"
+                "footer footer footer";
+            min-height: 100vh;
+            gap: 10px;
+        }
+
+        .course {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        /* Tablet View */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 180px 1fr;
+                grid-template-areas:
+                    "header header"
+                    "nav main"
+                    "resources resources"
+                    "footer footer";
+            }
+        }
+
+        /* Mobile View */
+        @media (max-width: 480px) {
+            .container {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    "header"
+                    "nav"
+                    "main"
+                    "resources"
+                    "footer";
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>ABC Online Learning</h1>
+            <p>Learn Anytime, Anywhere</p>
+        </header>
+
+        <nav>
+            <h2>Courses</h2>
+            <a href="#c">C Programming</a>
+            <a href="#java">Java</a>
+            <a href="#python">Python</a>
+            <a href="#web">Web Development</a>
+        </nav>
+
+        <main>
+            <h2>Welcome to Online Learning</h2>
+            <p>Choose a course and improve your skills.</p>
+
+            <div class="course" id="c">
+                <h3>C Programming</h3>
+                <p>Learn variables, loops, functions, and arrays.</p>
+            </div>
+
+            <div class="course" id="java">
+                <h3>Java Programming</h3>
+                <p>Learn object-oriented programming concepts.</p>
+            </div>
+
+            <div class="course" id="python">
+                <h3>Python Programming</h3>
+                <p>Learn Python basics and problem-solving.</p>
+            </div>
+
+            <div class="course" id="web">
+                <h3>Web Development</h3>
+                <p>Learn HTML, CSS, and JavaScript.</p>
+            </div>
+        </main>
+
+        <aside>
+            <h2>Resources</h2>
+            <p><a href="#notes">Study Notes</a></p>
+            <p><a href="#videos">Video Tutorials</a></p>
+            <p><a href="#tests">Practice Tests</a></p>
+
+            <h3>Announcements</h3>
+            <p>New courses are available!</p>
+            <p>Complete your assignments on time.</p>
+        </aside>
+
+        <footer>
+            <p>&copy; 2026 ABC Online Learning</p>
+            <p>Contact: learn@example.com</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
